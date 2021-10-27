@@ -222,3 +222,8 @@ func (com *DmSoft) Stop(id int) int {
 	ret, _ := com.dm.CallMethod("Stop", id)
 	return int(ret.Val)
 }
+
+func (com *DmSoft) ExecuteCmd(cmd, dir string, t int) int {
+	ret, _ := com.dm.CallMethod("ExecuteCmd", cmd, dir, t)
+	return int(ret.Val)
+}
